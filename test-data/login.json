@@ -1,0 +1,16 @@
+{
+  "cases": [
+    {
+      "name": "valid customer",
+      "email": "customer@practicesoftwaretesting.com",
+      "password": "welcome01",
+      "expectedResult": "success"
+    },
+    {
+      "name": "unknown account",
+      "email": "unregistered-git-homework@example.com",
+      "password": "wrong-password",
+      "expectedResult": "failure"
+    }
+  ]
+}

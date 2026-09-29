@@ -1,6 +1,6 @@
 # Git Essentials homework
 
-This Playwright project demonstrates reading login cases from JSON and records the Git workflow from the assignment. It uses the public Toolshop demo account listed in the earlier Day 5 assignment.
+This Playwright project demonstrates reading login cases from JSON and records the Git workflow from the assignment. The valid case uses the public Toolshop demo account listed in the earlier Day 5 assignment. The failure case uses an unregistered example address to avoid submitting a wrong password repeatedly for the shared public account.
 
 The attached Git Essentials materials teach how to configure Git, initialize a repository, use `.gitignore`, make commits on `feature/git_task`, merge that branch into `main`, and publish to a public GitHub repository. The solution files are ready locally. The commands below create the commits on your computer; the GitHub account, repository URL, and email destination belong to you.
 
@@ -15,7 +15,7 @@ test-data/login.json
 tests/login-data-provider-json.spec.ts
 ```
 
-`login.json` contains one successful and one unsuccessful public demo login. The slides say a JSON file is on the right of the sample but the attached PDF does not include its contents; these cases use the demo credentials from the Day 5 homework.
+`login.json` contains one successful login and one failed login for an unregistered example address. The slides say a JSON file is on the right of the sample but the attached PDF does not include its contents; the successful case uses credentials from the Day 5 homework.
 
 The JSON import uses TypeScript's built-in JSON support as configured by Playwright. Each record becomes its own clearly named test. Playwright gives each test a fresh browser context.
 
@@ -80,5 +80,5 @@ Open the repository on GitHub and copy its link. The assignment says to email th
 ## Notes
 
 - `.gitignore` prevents untracked dependencies, Playwright output, `.env` files, and saved authentication state from entering future commits. It does not remove a file that Git already tracks.
-- The login passwords in the JSON are public training demo values, not personal credentials.
-- No automatic Playwright test run was made for this prepared homework.
+- The successful-login case uses the public credentials from the Day 5 assignment; the failed-login case uses a fictitious email address.
+- A Playwright run on the live site returned `Account locked, too many failed attempts. Please contact the administrator.` Stop retrying the shared demo account until it becomes available again. This is a response from the site, not a passed test or a locator failure.
