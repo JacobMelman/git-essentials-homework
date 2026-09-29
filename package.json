@@ -1,0 +1,12 @@
+{
+  "name": "git-essentials-homework",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test tests/login-data-provider-json.spec.ts",
+    "test:headed": "playwright test tests/login-data-provider-json.spec.ts --headed"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1"
+  }
+}

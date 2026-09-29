@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Playwright output
+test-results/
+playwright-report/
+blob-report/
+
+# Credentials and local state
+.env
+playwright/.auth/
+storageState.json
